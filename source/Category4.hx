@@ -13,13 +13,14 @@ import flixel.text.FlxText;
 import flixel.input.mouse.FlxMouseButton;
 import flixel.util.FlxColor;
 import lime.utils.Assets;
+import Alphabet;
 
 
 class Category4 extends MusicBeatState
 {
-    public static var category1:FlxSprite;
-    public static var category2:FlxSprite;
-    public static var category3:FlxSprite;
+    public static var category1:Alphabet;
+    public static var category2:Alphabet;
+    public static var category3:Alphabet;
     var bg:FlxSprite;
    
     override function create()
@@ -35,22 +36,19 @@ class Category4 extends MusicBeatState
         bg.scrollFactor.set();
         add(bg);
 
-        category1 = new FlxSprite(427, 1090);
-        category1.loadGraphic(Paths.image('categories/category1', 'preload'));
+        category1 = new Alphabet(35, 50, "1");
         category1.antialiasing = false;
-		category1.screenCenter(Y);
+        category1.screenCenter(X);
         add(category1);
 
-        category2 = new FlxSprite(327, 1090);
-        category2.loadGraphic(Paths.image('categories/category2', 'preload'));
+        category2 = new Alphabet(35, 150, "2");
         category2.antialiasing = false;
-		category2.screenCenter(Y);
+        category2.screenCenter(X);
         add(category2);
 
-        category3 = new FlxSprite(227, 1090);
-        category3.loadGraphic(Paths.image('categories/category3', 'preload'));
+        category3 = new Alphabet(35, 250, "3");
         category3.antialiasing = false;
-		category3.screenCenter(Y);
+        category3.screenCenter(X);
         add(category3);
 
         super.create();

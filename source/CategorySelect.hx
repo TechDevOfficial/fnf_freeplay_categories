@@ -44,18 +44,22 @@ class CategorySelect extends MusicBeatState
 
         category1 = new Alphabet(35, 50, "1");
         category1.antialiasing = false;
+        category1.screenCenter(X);
         add(category1);
 
         category2 = new Alphabet(35, 150, "2");
         category2.antialiasing = false;
+        category2.screenCenter(X);
         add(category2);
         
         category3 = new Alphabet(35, 250, "3");
         category3.antialiasing = false;
+        category3.screenCenter(X);
         add(category3);
         
         category4 = new Alphabet(35, 350, "4");
         category4.antialiasing = false;
+        category4.screenCenter(X);
         add(category4);
 
         super.create();

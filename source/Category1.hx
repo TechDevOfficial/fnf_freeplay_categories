@@ -14,13 +14,12 @@ import flixel.input.mouse.FlxMouseButton;
 import flixel.util.FlxColor;
 import lime.utils.Assets;
 import categories.CategorySelect;
+import Alphabet;
 
 
 class Category1 extends MusicBeatState
 {
-    public static var category1:FlxSprite;
-    public static var category2:FlxSprite;
-    public static var category3:FlxSprite;
+    public static var category1:Alphabet;
     var bg:FlxSprite;
    
     override function create()
@@ -36,10 +35,9 @@ class Category1 extends MusicBeatState
         bg.scrollFactor.set();
         add(bg);
 
-        category1 = new FlxSprite(427, 1090);
-        category1.loadGraphic(Paths.image('categories/category1', 'preload'));
+        category1 = new Alphabet(35, 150, "1");
         category1.antialiasing = false;
-		category1.screenCenter();
+        category1.screenCenter();
         add(category1);
 
         super.create();
